@@ -68,7 +68,7 @@
 }
 .home{
     display: flex;
-    background: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?size=626&ext=jpg') no-repeat center;
+    background: url('portfolio_bg.avif') no-repeat center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -419,15 +419,26 @@ margin: 40px 10px;
     font-size: 25px;
     font-weight: 600;
     margin: 0px 0px 7px 0px;
-    }
-    
+}    
 .projects .projects-content .card .box{  
   transition: all 0.5s ease;
 }
+.projects .projects-content .card .box li{
+    list-style-type:none;
+}
+.projects .projects-content .card .box button{
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    background-color:#f1abb9;
+}
+.projects .projects-content .card:hover button{
+    background-color:#FFFFFFBF;
+}
 .projects .projects-content .card:hover{
-background: #f295a8;
-color: #fff;
-box-shadow: 1px 1px 2px rgb(217, 194, 194), 0 0 25px rgb(120, 120, 131), 0 0 5px rgb(143, 137, 137);
+    background: #f295a8;
+    color: #fff;
+    box-shadow: 1px 1px 2px rgb(217, 194, 194), 0 0 25px rgb(120, 120, 131), 0 0 5px rgb(143, 137, 137);
 }
 .projects .projects-content .card:hover .text{
     color: #111;
@@ -717,10 +728,6 @@ footer i{
     .about .about-content .left{
         margin-bottom: 0;
     }
-    
-    .about, .skills, .projects, .contacts{
-        padding: 100px 0px 50px 0px;
-    }
     .education{
         padding: 100px 20px 50px 20px;
     }
@@ -741,19 +748,28 @@ footer i{
         font-size: 16px;
     }
 }
+@media(max-width:370px){
+    .projects{
+        padding: 50px 20px;
+    }
+    .projects .projects-content .card {
+        padding:45px 65px;
+    }
+    .max-width{
+        padding: 0px 10px;
+    }
+}
 @media(max-width:831px){
     .projects .projects-content .card{
         width: calc(100% - 100px);
         text-align: center;
-        padding: 70px 50px;
-        margin: 50px 100px;
+        padding: 35px 35px;
+        margin: 50px 50px;
     }
 }
 @media(max-width:550px){
     .projects .projects-content .card{      
         text-align: center;
-        padding: 40px 20px;
-        margin: 40px 10px 40px 40px;
     }
 }
 
@@ -765,7 +781,6 @@ footer i{
         font-size: 46px;
     }
 }
-
 @media(max-width:640px){
     .education .title{
         font-size: 30px;
@@ -786,6 +801,14 @@ footer i{
 @media(max-width:432px){
     .education .title::before{
         width: 150px;
+    }
+    .projects{
+        padding: 50px 20px;
+    }
+    .projects .projects-content .card{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 }@media(max-width:400px){
     .education .title::before{
