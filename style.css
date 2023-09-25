@@ -179,7 +179,6 @@ section{
     transform: translateX(-50%);
 }
 .about .about-content,
-.skills .skills-content,
 .projects .projects-content,
 .contacts .contacts-content
 {
@@ -204,15 +203,6 @@ section{
     width: 56.5%;
     display: inline;
 }
-/*
-.about .about-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about .about-content .right .text span{
-    color: #f295a8;
-}*/
 .about{
     padding: 100px 0px;
 }
@@ -282,47 +272,46 @@ section{
     color: #f1abb9;
     background: rgb(33, 37, 41);
 }
-.skills .skills-content .div{
-    width: calc(50% - 30px);
+.skills .skills-content li{
+    list-style-type: none;
+    color: #FFFFFFBF;
+    padding: 20px;
+    margin: 1px solid #fff;
+    margin: 10px;
+    border-radius: 10px;
+    background:  #7d657b;
 }
-.skills .skills-content .div{
-    width: calc(50% - 30px);
+.skills .skills-content ul{
+   display: flex;
+   align-items: center;
+    flex-wrap: wrap;
+   
 }
-.skills .skills-content .skills-heading {
-  /* display:inline-block;*/
+.skills .skills-content .firstlist{
+    justify-content: space-evenly;
 }
-.skills .skills-content .skills-heading p{
-    font-size: 24px;
+
+.skills .skills-content li .text{
+    font-size: 25px;
     font-weight: 600;
 }
-.skills .skills-content .box{  
-    background: rgb(125, 101, 123);
-    text-align: center;
-    padding: 20px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 25px;
-  display: inline-block;
+.skills .skills-content li i{
+    color: #f295a8;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
 }
-.skills .skills-content .box{
-    transition: all 0.5s ease-in-out;
-}
-.skills .skills-content .box:hover{
+.skills .skills-content li:hover{
     background: #f295a8;
     color: #111;
 }
-.skills .skills-content .box:hover i{
+.skills .skills-content li:hover i{
     color: #fff;
 }
-.skills .skills-content .box i{
-    font-size: 50px;
-    color: #f295a8;
-    transition: all 0.5s ease-in-out;
-}
-.skills .skills-content .box .text{
+.skills .skills-content .firstheading{
     font-size: 25px;
     font-weight: 600;
-    margin: 5px 0px 7px 0px;
+    display: block;
 }
 /*education starts*/
 .education{
@@ -425,14 +414,17 @@ margin: 40px 10px;
 }
 .projects .projects-content .card .box li{
     list-style-type:none;
+    text-align: center;
 }
-.projects .projects-content .card .box button{
-    padding: 5px 10px;
-    margin-top: 5px;
+.projects .projects-content .card .box a{
+    text-decoration: none;
+    color: #000;
+    padding:5px 10px;
+    margin-top: 10px;
     border-radius: 8px;
     background-color:#f1abb9;
 }
-.projects .projects-content .card:hover button{
+.projects .projects-content .card:hover a{
     background-color:#FFFFFFBF;
 }
 .projects .projects-content .card:hover{
@@ -554,14 +546,6 @@ footer i{
         margin-left: 0px;
     }
 }
-/*
-@media (max-width: 1100px){
-    .about .about-content  img{
-        width: 450px;
-        height: 450px;
-       
-    }
-}*/
 @media (max-width: 1120px) {
     .about .about-content .column{
         width: 50%;
@@ -572,8 +556,11 @@ footer i{
     }
 }
 @media(max-width:1040px){
-    .about .about-content .column{
+    .about .about-content .left{
         width: 100%;
+    }
+    .about .about-content .right{
+        width: 90%;
     }
     .about .about-content .left{
         display: flex;
@@ -585,7 +572,7 @@ footer i{
         width: 500px;
     }
     .about .about-content .right{
-        flex: 100%;
+       flex: 100%;
     }   
     .contacts .contacts-content .column{
         width: calc(100% - 30px);
@@ -608,11 +595,6 @@ footer i{
         width: 300px;
     }
 }
-/*@media(max-width:500px){
-    .home ,  .about, .education, .skills, .projects, .contacts{
-        width: 100%;
-    }
-}*/
 @media (max-width: 951px){
     .max-width{
     padding: 0px 50px;
@@ -660,9 +642,9 @@ footer i{
     
 }
 @media (max-width: 490px){
-    .max-width{
+   /* .max-width{
         padding: 0px 25px;
-    }
+    }*/
     .home .home-content .text-2{
         font-size: 60px;
     }
@@ -691,19 +673,13 @@ footer i{
     }
 }
 @media(max-width:660px){
-    .skills .skills-content .card{
-        width: calc(100% - 30px);
-        margin: 25px 60px;
-        text-align: center;
-    }
     .education .title::after{
         font-size: 14px;
     }
 }
 @media(max-width:420px){
-    .skills .skills-content .card{
-        width: calc(100% - 50px);
-      text-align: center;
+    .max-width{
+        width: 100vw;
     }
     .home .home-content .text-1{
         font-size: 24px;
@@ -714,7 +690,7 @@ footer i{
 }
 @media(max-width:660px){
     .about .about-content .right .personal-info .info-item{
-        width: calc(100% - 10px);
+        width: calc(100% - 5px);
     }
 }
 @media(max-width:1120px){
